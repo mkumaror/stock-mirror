@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <% request.env['PATH_INFO'].slice! "/" %>
+  <title><%= request.env['PATH_INFO']%></title>
+  <meta name="description" content="Description of your site goes here">
+  <meta name="keywords" content="keyword1, keyword2, keyword3">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+</head>
+<body>
+<div class="page-in">
+<div class="page">
+<div class="main">
+<div class="header">
+<div class="header-top">
+<h1>Stock <span>Mirror</span></h1>
+</div>
+<div class="header-bottom">
+<h2>Where Money Values</h2>
+</div>
+<div class="topmenu">
+<ul>
+  <li style="background: transparent none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; padding-left: 0px;"><a href="/"><span>Home</span></a></li>
+  <li><a href="/about_us"><span>About&nbsp;us</span></a></li>
+  <li><a href="/services"><span>Services</span></a></li>
+  <li><a href="/pricing"><span>Pricing</span></a></li>
+  <li><a href="/contact_us"><span>Contact Us</span></a></li>
+  <li><a href="/careers"><span>Careers</span></a></li>
+</ul>
+</div>
+</div>
+  <%= yield %>
+<div class="footer">
+<p>&copy; Copyright 2014. Designed by <a target="_blank" href="http://www.htmltemplates.net">htmltemplates.net</a>
+</p>
+<ul>
+  <li style="border-left: medium none;"><a href="/"><span>Home</span></a></li>
+  <li><a href="/about_us"><span>About&nbsp;us</span></a></li>
+  <li><a href="/services"><span>Services</span></a></li>
+  <li><a href="/pricing"><span>Pricing</span></a></li>
+  <li><a href="/contact_us"><span>Contact Us</span></a></li>
+  <li style="padding-right: 0px;"><a href="/careers"><span>Careers</span></a></li>
+</ul>
+</div>
+<!--DO NOT Remove The Footer Links-->
+<!--Designed by-->
+<%= image_tag("footnote.gif", class:"copyright") %>
+<!--DO NOT Remove The Footer Links-->
+</div>
+</div>
+</div>
+
+</body></html>
+
